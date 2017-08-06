@@ -64,6 +64,7 @@ class Game extends PluginTask{
                       $team = $main->PlayerTeamColor($p);
                       $p->teleport(new Position($ac->getNested($team . ".X"), $ac->getNested($team . ".Y"), $ac->getNested($team . ".Z"), $main->getServer()->getLevelByName($ac->get("World"))));
                       $p->getInventory()->clearAll();
+                      $p->getInventory()->sendContents($p);
                       $p->setFood(20);
                       $p->sendMessage("§1Go!");
                     }
