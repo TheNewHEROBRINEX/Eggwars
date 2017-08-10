@@ -403,8 +403,6 @@ class EventListener implements Listener{
             $p->getInventory()->clearAll();
             $p->getInventory()->sendContents($p);
           }
-        }else{
-          $e->setCancelled();
         }
       }
     }else{
@@ -588,10 +586,6 @@ class EventListener implements Listener{
           break;
         }
       }
-    }else{
-      if(!$p->isOp()){
-        $e->setCancelled(true);
-      }
     }
   }
 
@@ -628,10 +622,6 @@ class EventListener implements Listener{
           $e->setCancelled(false);
           break;
         }
-      }
-    }else{
-      if(!$p->isOp()){
-        $e->setCancelled(true);
       }
     }
   }
